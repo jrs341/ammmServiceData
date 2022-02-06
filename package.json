@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=development",
+    "kill": "npx kill-port 5000 5001 8080 9000 9099 9199",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
