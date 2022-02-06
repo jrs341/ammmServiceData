@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jrs341/ammmServiceData/issues"
   },
-  "homepage": "https://github.com/jrs341/ammmServiceData#readme"
+  "homepage": "https://github.com/jrs341/ammmServiceData#readme",
+  "dependencies": {
+    "firebase": "^9.6.6"
+  }
 }
