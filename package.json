@@ -1,0 +1,19 @@
+{
+  "name": "ammmservicedata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrs341/ammmServiceData.git"
+  },
+  "author": "Jason Sinn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrs341/ammmServiceData/issues"
+  },
+  "homepage": "https://github.com/jrs341/ammmServiceData#readme"
+}
