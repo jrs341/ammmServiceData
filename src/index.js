@@ -1,15 +1,15 @@
-// src/index.js
 import { initializeApp } from 'firebase/app';
-import { getFirestore, doc, getDoc } from 'firebase/firestore/lite';
+//import { getFirestore, doc, getDoc } from 'firebase/firestore/lite';
 
-const firebaseApp = initializeApp({ /* config */ });
-const db = getFirestore(firebaseApp);
+const firebaseConfig = {
+  apiKey: "AIzaSyD_s3b2lqQFCZIk7LpH2QIENatq7oSQoj4",
+  authDomain: "fair-catcher-150017.firebaseapp.com",
+  databaseURL: "https://fair-catcher-150017-default-rtdb.firebaseio.com",
+  projectId: "fair-catcher-150017",
+  storageBucket: "fair-catcher-150017.appspot.com",
+  messagingSenderId: "1014672001327",
+  appId: "1:1014672001327:web:8728f01f7558611ff3f9da"
+};
 
-async function loadCity(name) {
-  const cityDoc = doc(db, `cities/${name}`);
-  const snapshot = await getDoc(cityDoc);
-  return {
-    id: snapshot.id,
-    ...snapshot.data(),
-  };
-}
+const app = initializeApp({firebaseConfig});
+//const db = getFirestore(firebaseApp);
