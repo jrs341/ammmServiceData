@@ -5,12 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Firebase Form</title>
   </head>
-  <script type="text/javascript" src="bundle.js">
-    console.log('firebaseApp');
+  <script type="module" src="bundle.js">
+    import {logData()} from '/bundle.js'
   </script>
+  <script type="text/javascript" src="bundle.js">
+  /*let logData = (event) => {
+  this.event.preventDefault();
+  let data = {};
+  console.log('this', this.event.target.id);
+  var elem = document.getElementById(this.event.target.id).elements;
+    for(var i = 0; i < elem.length; i++)
+      if(elem[i].name === "" || elem[i].value === "Submit"){console.log(elem[i].name)}
+      else {
+        data[elem[i].name] = elem[i].value; 
+      }
+      console.log('data', data);   
+  }*/
+  </script>
+  
+  <!--onSubmit="logData; return false"  onclick="logData(event)"-->
   <body>
     <h1>Customer Information</h1>
-    <form autocomplete="on">
+    <form id="form1" onSubmit="logData(this); return false" autocomplete="on">
       <label for="email">Email Address:</label><br>
       <input type="email" id="email" name="email"><br>
 
@@ -34,9 +50,17 @@
 
       <label for="zip">Postal Code:</label><br>
       <input type="text" id="zip" name="zip"><br>
+      <br>
+
+      <button type="submit" form="form1" value="Submit">Submit</button>
     </form>
+    
+    
+    <br>
+    <br>
+
     <h1>Vessel Information</h1>
-    <form>
+    <form id="form2" onSubmit="logData(this); return false">
       <label for="reg">Registration Number:</label><br>
       <input type="text" id="reg" name="reg" placeholder="TX-1234-AB"><br>
 
@@ -55,15 +79,9 @@
 
       <label for="specInstr">Special Instructions:</label><br>
       <input type="text" id="specInstr" name="specInstr" placeholder="Please list any gate codes necessary to access the vessel, location of the keys, etc... "><br>
+      <br>
 
-      <!-- <input type="radio" id="sched" name="sched">
-      <label for="sched">Scheduled Service</label><br>
-      
-      <input type="radio" id="unsched" name="unsched">
-      <label for="unsched">Unscheduled Service</label><br>-->
+      <button type="submit" form="form2" value="Submit">Submit</button>
     </form>
   </body>
-  <script type="text/javascript" src="bundle.js">
-    console.log('app');
-  </script>
 </html>

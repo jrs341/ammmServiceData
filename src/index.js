@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, doc, getDoc, getDocs, collection } from 'firebase/firestore/lite';
+import { getFirestore, doc, getDoc, getDocs, collection, setDoc, addDoc } from 'firebase/firestore/lite';
+import './firestore.js';
 
 const firebaseApp = initializeApp({ 
   projectId: "fair-catcher-150017",
@@ -10,25 +11,7 @@ const firebaseApp = initializeApp({
   messagingSenderId: "1014672001327",
   appId: "1:1014672001327:web:8728f01f7558611ff3f9da"});
 
+
 const db = getFirestore();
 
-const collectionRef = collection(db, 'Customer Info');
-
-getDocs(collectionRef)
-  .then((snapshot) => {
-    snapshot.forEach((doc) => {
-      console.log(doc.id, "=>", doc.data())
-    })
-  });
-
-/*const docRef = doc(db, 'boatRegistrationNumber', "TX-1234-AB");
-const docSnap = getDoc(docRef);
-
-docSnap.then(value => {console.log('data', value)})
-
-if (docSnap.exists()) {
-  console.log("Document data:", docSnap.data());
-} else {
-  // doc.data() will be undefined in this case
-  console.log("No such document!");
-};*/
+const customerCollection = collection(db, 'Customer Info');

@@ -6,9 +6,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-/******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
+/******/ var __webpack_modules__ = ({
 
 /***/ "./node_modules/@firebase/firestore/dist/lite/index.browser.esm2017.js":
 /*!*****************************************************************************!*\
@@ -50,13 +48,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/firestore.js":
+/*!**************************!*\
+  !*** ./src/firestore.js ***!
+  \**************************/
+/***/ (function() {
+
+eval("let logData = (event) => {\r\n    this.event.preventDefault();\r\n    let data = {};\r\n    console.log('this', this.event.target.id);\r\n    var elem = document.getElementById(this.event.target.id).elements;\r\n      for(var i = 0; i < elem.length; i++)\r\n        if(elem[i].name === \"\" || elem[i].value === \"Submit\"){console.log(elem[i].name)}\r\n        else {\r\n          data[elem[i].name] = elem[i].value; \r\n        }\r\n        console.log('data', data);   \r\n    }\r\n\r\n/*function logData(event) {\r\n  event.preventDefault();\r\n  var data = document.getElementById(\"form1\");\r\n  console.log(data.value);\r\n}\r\n//var data = {fname: \"Jason\", lname: \"Sinn\", email: 'test@me.com', phone: '098-765-4321', address: {street: \"some street\", city: \"austin\", state: \"TX\", zip: \"78613\"}}\r\n\r\nconst addNewCustomer = addDoc(customerCollection, data)\r\n.then(docRef => {\r\n  console.log(\"Document written with ID: \", docRef.id);\r\n});*/\r\n\r\n/*getDocs(customerCollection)\r\n  .then((snapshot) => {\r\n    snapshot.forEach((doc) => {\r\n      console.log(doc.id, \"=>\", doc.data())\r\n    })\r\n  });*/\r\n\r\n/*const docRef = doc(db, 'boatRegistrationNumber', \"TX-1234-AB\");\r\nconst docSnap = getDoc(docRef);\r\n\r\ndocSnap.then(value => {console.log('data', value.id)})*/\r\n\r\n/*if (docSnap.exists()) {\r\n  console.log(\"Document data:\", docSnap.data());\r\n} else {\r\n  // doc.data() will be undefined in this case\r\n  console.log(\"No such document!\");\r\n};*///# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZmlyZXN0b3JlLmpzLmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxxQkFBcUIsaUJBQWlCO0FBQ3RDLDhEQUE4RDtBQUM5RDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsY0FBYyxzRkFBc0Y7QUFDcEc7QUFDQTtBQUNBO0FBQ0E7QUFDQSxDQUFDLEVBQUU7QUFDSDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSztBQUNMLEdBQUcsRUFBRTtBQUNMO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsdUJBQXVCLDhCQUE4QjtBQUNyRDtBQUNBO0FBQ0E7QUFDQSxFQUFFO0FBQ0Y7QUFDQTtBQUNBLEVBQUUiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hbW1tc2VydmljZWRhdGEvLi9zcmMvZmlyZXN0b3JlLmpzP2JjMTYiXSwic291cmNlc0NvbnRlbnQiOlsibGV0IGxvZ0RhdGEgPSAoZXZlbnQpID0+IHtcclxuICAgIHRoaXMuZXZlbnQucHJldmVudERlZmF1bHQoKTtcclxuICAgIGxldCBkYXRhID0ge307XHJcbiAgICBjb25zb2xlLmxvZygndGhpcycsIHRoaXMuZXZlbnQudGFyZ2V0LmlkKTtcclxuICAgIHZhciBlbGVtID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQodGhpcy5ldmVudC50YXJnZXQuaWQpLmVsZW1lbnRzO1xyXG4gICAgICBmb3IodmFyIGkgPSAwOyBpIDwgZWxlbS5sZW5ndGg7IGkrKylcclxuICAgICAgICBpZihlbGVtW2ldLm5hbWUgPT09IFwiXCIgfHwgZWxlbVtpXS52YWx1ZSA9PT0gXCJTdWJtaXRcIil7Y29uc29sZS5sb2coZWxlbVtpXS5uYW1lKX1cclxuICAgICAgICBlbHNlIHtcclxuICAgICAgICAgIGRhdGFbZWxlbVtpXS5uYW1lXSA9IGVsZW1baV0udmFsdWU7IFxyXG4gICAgICAgIH1cclxuICAgICAgICBjb25zb2xlLmxvZygnZGF0YScsIGRhdGEpOyAgIFxyXG4gICAgfVxyXG5cclxuLypmdW5jdGlvbiBsb2dEYXRhKGV2ZW50KSB7XHJcbiAgZXZlbnQucHJldmVudERlZmF1bHQoKTtcclxuICB2YXIgZGF0YSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwiZm9ybTFcIik7XHJcbiAgY29uc29sZS5sb2coZGF0YS52YWx1ZSk7XHJcbn1cclxuLy92YXIgZGF0YSA9IHtmbmFtZTogXCJKYXNvblwiLCBsbmFtZTogXCJTaW5uXCIsIGVtYWlsOiAndGVzdEBtZS5jb20nLCBwaG9uZTogJzA5OC03NjUtNDMyMScsIGFkZHJlc3M6IHtzdHJlZXQ6IFwic29tZSBzdHJlZXRcIiwgY2l0eTogXCJhdXN0aW5cIiwgc3RhdGU6IFwiVFhcIiwgemlwOiBcIjc4NjEzXCJ9fVxyXG5cclxuY29uc3QgYWRkTmV3Q3VzdG9tZXIgPSBhZGREb2MoY3VzdG9tZXJDb2xsZWN0aW9uLCBkYXRhKVxyXG4udGhlbihkb2NSZWYgPT4ge1xyXG4gIGNvbnNvbGUubG9nKFwiRG9jdW1lbnQgd3JpdHRlbiB3aXRoIElEOiBcIiwgZG9jUmVmLmlkKTtcclxufSk7Ki9cclxuXHJcbi8qZ2V0RG9jcyhjdXN0b21lckNvbGxlY3Rpb24pXHJcbiAgLnRoZW4oKHNuYXBzaG90KSA9PiB7XHJcbiAgICBzbmFwc2hvdC5mb3JFYWNoKChkb2MpID0+IHtcclxuICAgICAgY29uc29sZS5sb2coZG9jLmlkLCBcIj0+XCIsIGRvYy5kYXRhKCkpXHJcbiAgICB9KVxyXG4gIH0pOyovXHJcblxyXG4vKmNvbnN0IGRvY1JlZiA9IGRvYyhkYiwgJ2JvYXRSZWdpc3RyYXRpb25OdW1iZXInLCBcIlRYLTEyMzQtQUJcIik7XHJcbmNvbnN0IGRvY1NuYXAgPSBnZXREb2MoZG9jUmVmKTtcclxuXHJcbmRvY1NuYXAudGhlbih2YWx1ZSA9PiB7Y29uc29sZS5sb2coJ2RhdGEnLCB2YWx1ZS5pZCl9KSovXHJcblxyXG4vKmlmIChkb2NTbmFwLmV4aXN0cygpKSB7XHJcbiAgY29uc29sZS5sb2coXCJEb2N1bWVudCBkYXRhOlwiLCBkb2NTbmFwLmRhdGEoKSk7XHJcbn0gZWxzZSB7XHJcbiAgLy8gZG9jLmRhdGEoKSB3aWxsIGJlIHVuZGVmaW5lZCBpbiB0aGlzIGNhc2VcclxuICBjb25zb2xlLmxvZyhcIk5vIHN1Y2ggZG9jdW1lbnQhXCIpO1xyXG59OyovIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/firestore.js\n");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ \"./node_modules/firebase/app/dist/index.esm.js\");\n/* harmony import */ var firebase_firestore_lite__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/firestore/lite */ \"./node_modules/firebase/firestore/lite/dist/index.esm.js\");\n\r\n\r\n\r\nconst firebaseApp = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)({ \r\n  projectId: \"fair-catcher-150017\",\r\n  apiKey: \"AIzaSyD_s3b2lqQFCZIk7LpH2QIENatq7oSQoj4\",\r\n  databaseURL: \"https://fair-catcher-150017-default-rtdb.firebaseio.com\",\r\n  authDomain: \"fair-catcher-150017.firebaseapp.com\",\r\n  storageBucket: \"fair-catcher-150017.appspot.com\",\r\n  messagingSenderId: \"1014672001327\",\r\n  appId: \"1:1014672001327:web:8728f01f7558611ff3f9da\"});\r\n\r\nconst db = (0,firebase_firestore_lite__WEBPACK_IMPORTED_MODULE_1__.getFirestore)();\r\n\r\nconst collectionRef = (0,firebase_firestore_lite__WEBPACK_IMPORTED_MODULE_1__.collection)(db, 'Customer Info');\r\n\r\n(0,firebase_firestore_lite__WEBPACK_IMPORTED_MODULE_1__.getDocs)(collectionRef)\r\n  .then((snapshot) => {\r\n    snapshot.forEach((doc) => {\r\n      console.log(doc.id, \"=>\", doc.data())\r\n    })\r\n  });\r\n\r\n/*const docRef = doc(db, 'boatRegistrationNumber', \"TX-1234-AB\");\r\nconst docSnap = getDoc(docRef);\r\n\r\ndocSnap.then(value => {console.log('data', value)})\r\n\r\nif (docSnap.exists()) {\r\n  console.log(\"Document data:\", docSnap.data());\r\n} else {\r\n  // doc.data() will be undefined in this case\r\n  console.log(\"No such document!\");\r\n};*///# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJtYXBwaW5ncyI6Ijs7O0FBQTZDO0FBQzRDO0FBQ3pGO0FBQ0Esb0JBQW9CLDJEQUFhO0FBQ2pDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHNEQUFzRDtBQUN0RDtBQUNBLFdBQVcscUVBQVk7QUFDdkI7QUFDQSxzQkFBc0IsbUVBQVU7QUFDaEM7QUFDQSxnRUFBTztBQUNQO0FBQ0E7QUFDQTtBQUNBLEtBQUs7QUFDTCxHQUFHO0FBQ0g7QUFDQTtBQUNBO0FBQ0E7QUFDQSx1QkFBdUIsMkJBQTJCO0FBQ2xEO0FBQ0E7QUFDQTtBQUNBLEVBQUU7QUFDRjtBQUNBO0FBQ0EsRUFBRSIsInNvdXJjZXMiOlsid2VicGFjazovL2FtbW1zZXJ2aWNlZGF0YS8uL3NyYy9pbmRleC5qcz9iNjM1Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGluaXRpYWxpemVBcHAgfSBmcm9tICdmaXJlYmFzZS9hcHAnO1xyXG5pbXBvcnQgeyBnZXRGaXJlc3RvcmUsIGRvYywgZ2V0RG9jLCBnZXREb2NzLCBjb2xsZWN0aW9uIH0gZnJvbSAnZmlyZWJhc2UvZmlyZXN0b3JlL2xpdGUnO1xyXG5cclxuY29uc3QgZmlyZWJhc2VBcHAgPSBpbml0aWFsaXplQXBwKHsgXHJcbiAgcHJvamVjdElkOiBcImZhaXItY2F0Y2hlci0xNTAwMTdcIixcclxuICBhcGlLZXk6IFwiQUl6YVN5RF9zM2IybHFRRkNaSWs3THBIMlFJRU5hdHE3b1NRb2o0XCIsXHJcbiAgZGF0YWJhc2VVUkw6IFwiaHR0cHM6Ly9mYWlyLWNhdGNoZXItMTUwMDE3LWRlZmF1bHQtcnRkYi5maXJlYmFzZWlvLmNvbVwiLFxyXG4gIGF1dGhEb21haW46IFwiZmFpci1jYXRjaGVyLTE1MDAxNy5maXJlYmFzZWFwcC5jb21cIixcclxuICBzdG9yYWdlQnVja2V0OiBcImZhaXItY2F0Y2hlci0xNTAwMTcuYXBwc3BvdC5jb21cIixcclxuICBtZXNzYWdpbmdTZW5kZXJJZDogXCIxMDE0NjcyMDAxMzI3XCIsXHJcbiAgYXBwSWQ6IFwiMToxMDE0NjcyMDAxMzI3OndlYjo4NzI4ZjAxZjc1NTg2MTFmZjNmOWRhXCJ9KTtcclxuXHJcbmNvbnN0IGRiID0gZ2V0RmlyZXN0b3JlKCk7XHJcblxyXG5jb25zdCBjb2xsZWN0aW9uUmVmID0gY29sbGVjdGlvbihkYiwgJ0N1c3RvbWVyIEluZm8nKTtcclxuXHJcbmdldERvY3MoY29sbGVjdGlvblJlZilcclxuICAudGhlbigoc25hcHNob3QpID0+IHtcclxuICAgIHNuYXBzaG90LmZvckVhY2goKGRvYykgPT4ge1xyXG4gICAgICBjb25zb2xlLmxvZyhkb2MuaWQsIFwiPT5cIiwgZG9jLmRhdGEoKSlcclxuICAgIH0pXHJcbiAgfSk7XHJcblxyXG4vKmNvbnN0IGRvY1JlZiA9IGRvYyhkYiwgJ2JvYXRSZWdpc3RyYXRpb25OdW1iZXInLCBcIlRYLTEyMzQtQUJcIik7XHJcbmNvbnN0IGRvY1NuYXAgPSBnZXREb2MoZG9jUmVmKTtcclxuXHJcbmRvY1NuYXAudGhlbih2YWx1ZSA9PiB7Y29uc29sZS5sb2coJ2RhdGEnLCB2YWx1ZSl9KVxyXG5cclxuaWYgKGRvY1NuYXAuZXhpc3RzKCkpIHtcclxuICBjb25zb2xlLmxvZyhcIkRvY3VtZW50IGRhdGE6XCIsIGRvY1NuYXAuZGF0YSgpKTtcclxufSBlbHNlIHtcclxuICAvLyBkb2MuZGF0YSgpIHdpbGwgYmUgdW5kZWZpbmVkIGluIHRoaXMgY2FzZVxyXG4gIGNvbnNvbGUubG9nKFwiTm8gc3VjaCBkb2N1bWVudCFcIik7XHJcbn07Ki8iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ \"./node_modules/firebase/app/dist/index.esm.js\");\n/* harmony import */ var firebase_firestore_lite__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/firestore/lite */ \"./node_modules/firebase/firestore/lite/dist/index.esm.js\");\n/* harmony import */ var _firestore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./firestore.js */ \"./src/firestore.js\");\n/* harmony import */ var _firestore_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_firestore_js__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\r\nconst firebaseApp = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)({ \r\n  projectId: \"fair-catcher-150017\",\r\n  apiKey: \"AIzaSyD_s3b2lqQFCZIk7LpH2QIENatq7oSQoj4\",\r\n  databaseURL: \"https://fair-catcher-150017-default-rtdb.firebaseio.com\",\r\n  authDomain: \"fair-catcher-150017.firebaseapp.com\",\r\n  storageBucket: \"fair-catcher-150017.appspot.com\",\r\n  messagingSenderId: \"1014672001327\",\r\n  appId: \"1:1014672001327:web:8728f01f7558611ff3f9da\"});\r\n\r\n\r\nconst db = (0,firebase_firestore_lite__WEBPACK_IMPORTED_MODULE_1__.getFirestore)();\r\n\r\nconst customerCollection = (0,firebase_firestore_lite__WEBPACK_IMPORTED_MODULE_1__.collection)(db, 'Customer Info');//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBNkM7QUFDNEQ7QUFDakY7QUFDeEI7QUFDQSxvQkFBb0IsMkRBQWE7QUFDakM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esc0RBQXNEO0FBQ3REO0FBQ0E7QUFDQSxXQUFXLHFFQUFZO0FBQ3ZCO0FBQ0EsMkJBQTJCLG1FQUFVIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vYW1tbXNlcnZpY2VkYXRhLy4vc3JjL2luZGV4LmpzP2I2MzUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgaW5pdGlhbGl6ZUFwcCB9IGZyb20gJ2ZpcmViYXNlL2FwcCc7XHJcbmltcG9ydCB7IGdldEZpcmVzdG9yZSwgZG9jLCBnZXREb2MsIGdldERvY3MsIGNvbGxlY3Rpb24sIHNldERvYywgYWRkRG9jIH0gZnJvbSAnZmlyZWJhc2UvZmlyZXN0b3JlL2xpdGUnO1xyXG5pbXBvcnQgJy4vZmlyZXN0b3JlLmpzJztcclxuXHJcbmNvbnN0IGZpcmViYXNlQXBwID0gaW5pdGlhbGl6ZUFwcCh7IFxyXG4gIHByb2plY3RJZDogXCJmYWlyLWNhdGNoZXItMTUwMDE3XCIsXHJcbiAgYXBpS2V5OiBcIkFJemFTeURfczNiMmxxUUZDWklrN0xwSDJRSUVOYXRxN29TUW9qNFwiLFxyXG4gIGRhdGFiYXNlVVJMOiBcImh0dHBzOi8vZmFpci1jYXRjaGVyLTE1MDAxNy1kZWZhdWx0LXJ0ZGIuZmlyZWJhc2Vpby5jb21cIixcclxuICBhdXRoRG9tYWluOiBcImZhaXItY2F0Y2hlci0xNTAwMTcuZmlyZWJhc2VhcHAuY29tXCIsXHJcbiAgc3RvcmFnZUJ1Y2tldDogXCJmYWlyLWNhdGNoZXItMTUwMDE3LmFwcHNwb3QuY29tXCIsXHJcbiAgbWVzc2FnaW5nU2VuZGVySWQ6IFwiMTAxNDY3MjAwMTMyN1wiLFxyXG4gIGFwcElkOiBcIjE6MTAxNDY3MjAwMTMyNzp3ZWI6ODcyOGYwMWY3NTU4NjExZmYzZjlkYVwifSk7XHJcblxyXG5cclxuY29uc3QgZGIgPSBnZXRGaXJlc3RvcmUoKTtcclxuXHJcbmNvbnN0IGN1c3RvbWVyQ29sbGVjdGlvbiA9IGNvbGxlY3Rpb24oZGIsICdDdXN0b21lciBJbmZvJyk7Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.js\n");
 
 /***/ }),
 
@@ -90,79 +98,89 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ })
 
-/******/ 	});
+/******/ });
 /************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
+/******/ // The module cache
+/******/ var __webpack_module_cache__ = {};
+/******/ 
+/******/ // The require function
+/******/ function __webpack_require__(moduleId) {
+/******/ 	// Check if module is in cache
+/******/ 	var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 	if (cachedModule !== undefined) {
+/******/ 		return cachedModule.exports;
 /******/ 	}
-/******/ 	
+/******/ 	// Create a new module (and put it into the cache)
+/******/ 	var module = __webpack_module_cache__[moduleId] = {
+/******/ 		// no module.id needed
+/******/ 		// no module.loaded needed
+/******/ 		exports: {}
+/******/ 	};
+/******/ 
+/******/ 	// Execute the module function
+/******/ 	__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 
+/******/ 	// Return the exports of the module
+/******/ 	return module.exports;
+/******/ }
+/******/ 
 /************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
+/******/ /* webpack/runtime/compat get default export */
+/******/ (() => {
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = (module) => {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			() => (module['default']) :
+/******/ 			() => (module);
+/******/ 		__webpack_require__.d(getter, { a: getter });
+/******/ 		return getter;
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/define property getters */
+/******/ (() => {
+/******/ 	// define getter functions for harmony exports
+/******/ 	__webpack_require__.d = (exports, definition) => {
+/******/ 		for(var key in definition) {
+/******/ 			if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 			}
-/******/ 		};
+/******/ 		}
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/global */
+/******/ (() => {
+/******/ 	__webpack_require__.g = (function() {
+/******/ 		if (typeof globalThis === 'object') return globalThis;
+/******/ 		try {
+/******/ 			return this || new Function('return this')();
+/******/ 		} catch (e) {
+/******/ 			if (typeof window === 'object') return window;
+/******/ 		}
 /******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/hasOwnProperty shorthand */
+/******/ (() => {
+/******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/make namespace object */
+/******/ (() => {
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = (exports) => {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/ })();
+/******/ 
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
-/******/ 	
-/******/ })()
-;
+/******/ 
+/******/ // startup
+/******/ // Load entry module and return exports
+/******/ // This entry module can't be inlined because the eval-source-map devtool is used.
+/******/ var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 
