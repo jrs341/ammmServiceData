@@ -1,4 +1,4 @@
-let logData = (event) => {
+const logData = (event) => {
     this.event.preventDefault();
     let data = {};
     console.log('this', this.event.target.id);
@@ -11,6 +11,8 @@ let logData = (event) => {
         console.log('data', data);   
     }
 
+export { logData };
+//exports.logData = logData;
 /*function logData(event) {
   event.preventDefault();
   var data = document.getElementById("form1");

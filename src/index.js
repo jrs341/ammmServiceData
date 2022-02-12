@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, getDoc, getDocs, collection, setDoc, addDoc } from 'firebase/firestore/lite';
-import './firestore.js';
+import { logData, text } from './firestore.js';
+import { login } from './login.js';
 
 const firebaseApp = initializeApp({ 
   projectId: "fair-catcher-150017",
@@ -11,7 +12,11 @@ const firebaseApp = initializeApp({
   messagingSenderId: "1014672001327",
   appId: "1:1014672001327:web:8728f01f7558611ff3f9da"});
 
-
 const db = getFirestore();
 
 const customerCollection = collection(db, 'Customer Info');
+
+const load = () => {
+  console.log("load event detected!", login);
+}
+window.onload = load;
